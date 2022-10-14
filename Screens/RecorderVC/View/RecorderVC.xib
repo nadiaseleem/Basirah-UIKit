@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecorderVC" customModule="Basirah" customModuleProvider="target">
+            <connections>
+                <outlet property="finishButton" destination="pid-oj-nf3" id="tsN-b4-wyB"/>
+                <outlet property="playButton" destination="2DQ-aE-Q2m" id="C3Y-uR-PC7"/>
+                <outlet property="recorderImgView" destination="55M-bN-jFQ" id="26W-11-kK2"/>
+                <outlet property="resetButton" destination="V55-9b-BCH" id="Chr-p4-YUM"/>
+                <outlet property="uploadingIndicatorLabel" destination="7in-hh-pIY" id="IIn-sK-GTR"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="recorder-icon" translatesAutoresizingMaskIntoConstraints="NO" id="55M-bN-jFQ">
+                    <rect key="frame" x="47.5" y="75.5" width="280" height="183"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQ2-6G-gIE">
+                    <rect key="frame" x="47.5" y="75.5" width="280" height="183"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="280" id="U4B-dM-gAG"/>
+                        <constraint firstAttribute="height" constant="183" id="qOB-9u-PAd"/>
+                    </constraints>
+                    <connections>
+                        <action selector="recordPauseButtonDidTouched:" destination="-1" eventType="touchUpInside" id="uDR-ob-VVh"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pid-oj-nf3">
+                    <rect key="frame" x="47.5" y="290.5" width="280" height="70"/>
+                    <color key="backgroundColor" red="0.1137254902" green="0.60784313729999995" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="280" id="DLN-Nj-r4j"/>
+                        <constraint firstAttribute="height" constant="70" id="f4C-CV-F1x"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                    <state key="normal" title="انهاء التسجيل ورفع الفيديو">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="finishRecordingButtonDidTOuched:" destination="-1" eventType="touchUpInside" id="ObZ-2B-NMg"/>
+                    </connections>
+                </button>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="جاري رفع المقطع الصوتي ٢٠ ٪" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7in-hh-pIY">
+                    <rect key="frame" x="88" y="392.5" width="199" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V55-9b-BCH">
+                    <rect key="frame" x="0.0" y="597" width="375" height="70"/>
+                    <color key="backgroundColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="iYv-Vi-xvP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                    <state key="normal" title="مسح التسجيل">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="resetButtonDidTouched:" destination="-1" eventType="touchUpInside" id="ks4-6Q-bCI"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FIh-Fo-W9V">
+                    <rect key="frame" x="16" y="0.0" width="30" height="30"/>
+                    <state key="normal" title="الغاء"/>
+                    <connections>
+                        <action selector="dismissButtonDidTouched:" destination="-1" eventType="touchUpInside" id="o0v-lo-V4W"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2DQ-aE-Q2m">
+                    <rect key="frame" x="0.0" y="519" width="375" height="70"/>
+                    <color key="backgroundColor" red="0.95294117649999999" green="0.77647058820000003" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="NFC-rn-auG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                    <state key="normal" title="تشغيل">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="playButtonDidTouched:" destination="-1" eventType="touchUpInside" id="3JB-0U-pgQ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="7in-hh-pIY" firstAttribute="top" secondItem="pid-oj-nf3" secondAttribute="bottom" constant="32" id="CSd-SN-31Z"/>
+                <constraint firstItem="lQ2-6G-gIE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="CVZ-on-xU8"/>
+                <constraint firstItem="2DQ-aE-Q2m" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="IVA-Pu-64k"/>
+                <constraint firstItem="55M-bN-jFQ" firstAttribute="bottom" secondItem="lQ2-6G-gIE" secondAttribute="bottom" id="JcX-D8-SmU"/>
+                <constraint firstItem="FIh-Fo-W9V" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Lhi-ia-cIu"/>
+                <constraint firstItem="V55-9b-BCH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="R1b-xb-IbG"/>
+                <constraint firstItem="lQ2-6G-gIE" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="0.5" id="U4N-cl-qia"/>
+                <constraint firstItem="V55-9b-BCH" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="ULd-e9-dgo"/>
+                <constraint firstItem="2DQ-aE-Q2m" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Wcc-Tb-cp1"/>
+                <constraint firstItem="pid-oj-nf3" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="a24-gc-nga"/>
+                <constraint firstItem="V55-9b-BCH" firstAttribute="top" secondItem="2DQ-aE-Q2m" secondAttribute="bottom" constant="8" id="dBd-xk-nQH"/>
+                <constraint firstItem="FIh-Fo-W9V" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="eaL-2S-P1J"/>
+                <constraint firstItem="7in-hh-pIY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="fLS-wl-Qfv"/>
+                <constraint firstItem="V55-9b-BCH" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="hwt-xe-fut"/>
+                <constraint firstItem="pid-oj-nf3" firstAttribute="top" secondItem="55M-bN-jFQ" secondAttribute="bottom" constant="32" id="j78-mQ-snE"/>
+                <constraint firstItem="55M-bN-jFQ" firstAttribute="top" secondItem="lQ2-6G-gIE" secondAttribute="top" id="oFT-Zw-hhu"/>
+                <constraint firstItem="55M-bN-jFQ" firstAttribute="leading" secondItem="lQ2-6G-gIE" secondAttribute="leading" id="tUp-XX-iiG"/>
+                <constraint firstItem="55M-bN-jFQ" firstAttribute="trailing" secondItem="lQ2-6G-gIE" secondAttribute="trailing" id="x1B-oh-NNK"/>
+            </constraints>
+            <point key="canvasLocation" x="73.5" y="59.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="recorder-icon" width="1024" height="1024"/>
+    </resources>
+</document>
