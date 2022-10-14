@@ -4,4 +4,4 @@
   The application allows visually impaired users to post audio request for reading text. Volunteers are able to view these requests and offer their response as recorded audio links.
 
 
-![Screenshot](pic.png)
+![Screenshot](pics.png)
